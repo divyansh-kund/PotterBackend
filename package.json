@@ -4,8 +4,9 @@
   "description": "",
   "main": "large.js",
   "scripts": {
-    "start": "nodemon server.js"
-  },
+    "start": "node fileName.js",
+    "start:dev": "nodemon fileName.js"
+  },  
   "author": "",
   "license": "ISC",
   "devDependencies": {
