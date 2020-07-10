@@ -31,7 +31,7 @@ app.post('/signin',(req,res)=>{signin.SigninHandle(req,res,bcrypt,db)})
 
 app.post('/register',(req,res)=>{register.registerHandle(req,res,bcrypt,db)})
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{
 	console.log("Server's running")
 });
 
