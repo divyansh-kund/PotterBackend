@@ -27,6 +27,10 @@ app.use(bodyParser.urlencoded({extended:false}));//For using POSTMAN
 
 app.use(bodyParser.json());
 
+app.get('/',(req,res)=>{
+	res.json('its running')
+})
+
 app.post('/signin',(req,res)=>{signin.SigninHandle(req,res,bcrypt,db)})
 
 app.post('/register',(req,res)=>{register.registerHandle(req,res,bcrypt,db)})
