@@ -30,8 +30,7 @@ const registerHandle= (req,res,bcrypt,db)=>{
             .catch(err=>{
                 res.status(400).json("The user already exists")
             })
-        })
-        .catch(err=> res.status(400).json('Completely unable to register'))
+        }).catch(err=> res.status(400).json(err))
     }
 }
 module.exports = {
