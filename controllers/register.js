@@ -3,6 +3,7 @@ const registerHandle= (req,res,bcrypt,db)=>{
     if (!email || !password || !name ) {
        return res.status(400).json('incorrect FORM')
     } else{
+        process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
         const hash = bcrypt.hashSync(password);
         db.transaction(trx=>{
             trx.insert({
