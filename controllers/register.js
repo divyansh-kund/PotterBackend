@@ -22,7 +22,7 @@ const registerHandle= (req,res,bcrypt,db)=>{
                 }).then(user=>{
                     res.json(user[0]);
                 }).catch(err=>{
-                    res.status(400).json(err)
+                    res.status(400).json("There was a problem Registering")
                 })
             })
             .then(trx.commit)
