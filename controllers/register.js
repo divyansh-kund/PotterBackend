@@ -26,7 +26,7 @@ const registerHandle= (req,res,bcrypt,db)=>{
                 })
             })
             .then(trx.commit)
-            .then(trx.rollback)
+            .catch(trx.rollback)
             .catch(err=>{
                 res.status(400).json("The user already exists")
             })
